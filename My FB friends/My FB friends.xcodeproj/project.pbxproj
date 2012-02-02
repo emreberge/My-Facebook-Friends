@@ -1,0 +1,280 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C3C1C2CD14DA39EF005C32A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */; };
+		C3C1C2CF14DA39EF005C32A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */; };
+		C3C1C2D114DA39EF005C32A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2D014DA39EF005C32A7 /* CoreGraphics.framework */; };
+		C3C1C2D714DA39EF005C32A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3C1C2D514DA39EF005C32A7 /* InfoPlist.strings */; };
+		C3C1C2D914DA39EF005C32A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2D814DA39EF005C32A7 /* main.m */; };
+		C3C1C2DD14DA39EF005C32A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */; };
+		C3C1C2E014DA39EF005C32A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2DF14DA39EF005C32A7 /* ViewController.m */; };
+		C3C1C2E314DA39EF005C32A7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C1C2E114DA39EF005C32A7 /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C3C1C2C814DA39EF005C32A7 /* My FB friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My FB friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C3C1C2D014DA39EF005C32A7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C3C1C2D414DA39EF005C32A7 /* My FB friends-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "My FB friends-Info.plist"; sourceTree = "<group>"; };
+		C3C1C2D614DA39EF005C32A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3C1C2D814DA39EF005C32A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3C1C2DA14DA39EF005C32A7 /* My FB friends-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My FB friends-Prefix.pch"; sourceTree = "<group>"; };
+		C3C1C2DB14DA39EF005C32A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C3C1C2DE14DA39EF005C32A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C3C1C2DF14DA39EF005C32A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C3C1C2E214DA39EF005C32A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3C1C2C514DA39EF005C32A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C1C2CD14DA39EF005C32A7 /* UIKit.framework in Frameworks */,
+				C3C1C2CF14DA39EF005C32A7 /* Foundation.framework in Frameworks */,
+				C3C1C2D114DA39EF005C32A7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C3C1C2BD14DA39EF005C32A7 = {
+			isa = PBXGroup;
+			children = (
+				C3C1C2D214DA39EF005C32A7 /* My FB friends */,
+				C3C1C2CB14DA39EF005C32A7 /* Frameworks */,
+				C3C1C2C914DA39EF005C32A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C3C1C2C914DA39EF005C32A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C3C1C2C814DA39EF005C32A7 /* My FB friends.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C3C1C2CB14DA39EF005C32A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */,
+				C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */,
+				C3C1C2D014DA39EF005C32A7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3C1C2D214DA39EF005C32A7 /* My FB friends */ = {
+			isa = PBXGroup;
+			children = (
+				C3C1C2DB14DA39EF005C32A7 /* AppDelegate.h */,
+				C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */,
+				C3C1C2DE14DA39EF005C32A7 /* ViewController.h */,
+				C3C1C2DF14DA39EF005C32A7 /* ViewController.m */,
+				C3C1C2E114DA39EF005C32A7 /* ViewController.xib */,
+				C3C1C2D314DA39EF005C32A7 /* Supporting Files */,
+			);
+			path = "My FB friends";
+			sourceTree = "<group>";
+		};
+		C3C1C2D314DA39EF005C32A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C3C1C2D414DA39EF005C32A7 /* My FB friends-Info.plist */,
+				C3C1C2D514DA39EF005C32A7 /* InfoPlist.strings */,
+				C3C1C2D814DA39EF005C32A7 /* main.m */,
+				C3C1C2DA14DA39EF005C32A7 /* My FB friends-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C3C1C2C714DA39EF005C32A7 /* My FB friends */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3C1C2E614DA39EF005C32A7 /* Build configuration list for PBXNativeTarget "My FB friends" */;
+			buildPhases = (
+				C3C1C2C414DA39EF005C32A7 /* Sources */,
+				C3C1C2C514DA39EF005C32A7 /* Frameworks */,
+				C3C1C2C614DA39EF005C32A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My FB friends";
+			productName = "My FB friends";
+			productReference = C3C1C2C814DA39EF005C32A7 /* My FB friends.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C3C1C2BF14DA39EF005C32A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Bontouch AB, Codely HB";
+			};
+			buildConfigurationList = C3C1C2C214DA39EF005C32A7 /* Build configuration list for PBXProject "My FB friends" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C3C1C2BD14DA39EF005C32A7;
+			productRefGroup = C3C1C2C914DA39EF005C32A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3C1C2C714DA39EF005C32A7 /* My FB friends */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C3C1C2C614DA39EF005C32A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C1C2D714DA39EF005C32A7 /* InfoPlist.strings in Resources */,
+				C3C1C2E314DA39EF005C32A7 /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3C1C2C414DA39EF005C32A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3C1C2D914DA39EF005C32A7 /* main.m in Sources */,
+				C3C1C2DD14DA39EF005C32A7 /* AppDelegate.m in Sources */,
+				C3C1C2E014DA39EF005C32A7 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C3C1C2D514DA39EF005C32A7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3C1C2D614DA39EF005C32A7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C3C1C2E114DA39EF005C32A7 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C3C1C2E214DA39EF005C32A7 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C3C1C2E414DA39EF005C32A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C3C1C2E514DA39EF005C32A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3C1C2E714DA39EF005C32A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "My FB friends/My FB friends-Prefix.pch";
+				INFOPLIST_FILE = "My FB friends/My FB friends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C3C1C2E814DA39EF005C32A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "My FB friends/My FB friends-Prefix.pch";
+				INFOPLIST_FILE = "My FB friends/My FB friends-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C3C1C2C214DA39EF005C32A7 /* Build configuration list for PBXProject "My FB friends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3C1C2E414DA39EF005C32A7 /* Debug */,
+				C3C1C2E514DA39EF005C32A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3C1C2E614DA39EF005C32A7 /* Build configuration list for PBXNativeTarget "My FB friends" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3C1C2E714DA39EF005C32A7 /* Debug */,
+				C3C1C2E814DA39EF005C32A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C3C1C2BF14DA39EF005C32A7 /* Project object */;
+}
