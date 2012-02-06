@@ -7,23 +7,46 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
+#import "AFJSONRequestOperation.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize facebook = _facebook;
 
 - (void)dealloc
 {
     [_window release];
     [_viewController release];
+    [_facebook release];
     [super dealloc];
+}
+
+- (void)checkUserDefaultsForFacebookAccessToken
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    if ([defaults objectForKey:@"FBAccessTokenKey"] 
+        && [defaults objectForKey:@"FBExpirationDateKey"]) {
+        self.facebook.accessToken = [defaults objectForKey:@"FBAccessTokenKey"];
+        self.facebook.expirationDate = [defaults objectForKey:@"FBExpirationDateKey"];
+    }
+}
+
+- (void) makeSureFacebookSessionIsValid
+{
+    if (![self.facebook isSessionValid]) {
+        [self.facebook authorize:nil];
+    }
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.facebook = [[Facebook alloc] initWithAppId:@"379633892050184" andDelegate:self];
+    [self checkUserDefaultsForFacebookAccessToken];
+    [self makeSureFacebookSessionIsValid];
+    
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
@@ -70,5 +93,47 @@
      See also applicationDidEnterBackground:.
      */
 }
+
+// Pre 4.2 support
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [self.facebook handleOpenURL:url]; 
+}
+
+// For 4.2+ support
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [self.facebook handleOpenURL:url]; 
+}
+
+#pragma mark - FBSessionDelegate
+
+- (void)fbDidLogin {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:self.facebook.accessToken forKey:@"FBAccessTokenKey"];
+    [defaults setObject:self.facebook.expirationDate forKey:@"FBExpirationDateKey"];
+    [defaults synchronize];
+}
+
+- (void)fbDidNotLogin:(BOOL)cancelled
+{
+
+}
+
+- (void)fbDidLogout
+{
+    
+}
+
+-(void)fbSessionInvalidated
+{
+    
+}
+
+- (void)fbDidExtendToken:(NSString *)accessToken expiresAt:(NSDate *)expiresAt
+{
+    
+}
+
+
 
 @end
