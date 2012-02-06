@@ -149,14 +149,24 @@
 				C38C0E8214DFBE7900C883B7 /* JSON */,
 			);
 			name = "facebook-io-sdk";
+			path = "../../My FB friends";
+			sourceTree = "<group>";
+		};
+		C38C0E9D14DFBEDA00C883B7 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				C38C0E9C14DFBE8200C883B7 /* facebook-io-sdk */,
+				C3C1C2E914DA3AA6005C32A7 /* AFNetworking */,
+			);
+			name = Lib;
+			path = ../AFNetworking/AFNetworking;
 			sourceTree = "<group>";
 		};
 		C3C1C2BD14DA39EF005C32A7 = {
 			isa = PBXGroup;
 			children = (
-				C38C0E9C14DFBE8200C883B7 /* facebook-io-sdk */,
-				C3C1C2E914DA3AA6005C32A7 /* AFNetworking */,
 				C3C1C2D214DA39EF005C32A7 /* My FB friends */,
+				C38C0E9D14DFBEDA00C883B7 /* Lib */,
 				C3C1C2CB14DA39EF005C32A7 /* Frameworks */,
 				C3C1C2C914DA39EF005C32A7 /* Products */,
 			);
@@ -230,7 +240,6 @@
 				C3C1C2FE14DA3AA6005C32A7 /* UIImageView+AFNetworking.m */,
 			);
 			name = AFNetworking;
-			path = ../AFNetworking/AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
