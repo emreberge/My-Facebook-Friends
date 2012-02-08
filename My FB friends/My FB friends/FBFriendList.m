@@ -1,18 +1,20 @@
 //
-//  FBFriendListTests.h
+//  FBFriendList.m
 //  My FB friends
 //
 //  Created by Emre Ergenekon on 2/8/12.
 //  Copyright (c) 2012 Bontouch AB, Codely HB. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
 #import "FBFriendList.h"
 
-@interface FBFriendListTests : SenTestCase
+@implementation FBFriendList
+
+- (id) initWithFriendsJSON:(id) friends
 {
-    FBFriendList* fbFriendList;
+    if(self = [super init]) {
+        
+    }
+    return self;
 }
-
-
 @end

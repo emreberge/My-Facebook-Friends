@@ -7,24 +7,32 @@
 //
 
 #import "FBFriendListTests.h"
+#import "AFJSONUtilities.h"
+
+#define kExampleFBFriendsJSON @"{ \"data\": [{\"name\": \"Adam Smith\", \"id\": \"1201503\"},{\"name\": \"George Lucas\", \"id\": \"5123512\"},{\"name\": \"Erlang Pascal\",\"id\": \"1241245123\"}],\"paging\": {\"next\": \"https://graph.facebook.com/688752050/friends?format=json&limit=500&offset=500&__after_id=100202253318773\"}}"
 
 @implementation FBFriendListTests
 
 - (void)setUp
 {
     [super setUp];
-    
+    NSError *error = nil;
+    id friendsJSON = AFJSONDecode([kExampleFBFriendsJSON dataUsingEncoding:NSUTF8StringEncoding], &error);
+    STAssertNotNil(friendsJSON, @"Could not create an JSON object");
+    NSLog(@"%@", kExampleFBFriendsJSON);
+    fbFriendList = [[FBFriendList alloc] initWithFriendsJSON:friendsJSON];
+    STAssertNotNil(fbFriendList, @"Failed to create FBFriendsList object");
 }
 
 - (void)tearDown
 {
-    
+    [fbFriendList release];
     [super tearDown];
 }
 
-- (void)testFail
+- (void)testInit
 {
-    STFail(@"This is meant to fail");
+    // Intentionaly empty to trigger a setUp.
 }
 
 @end

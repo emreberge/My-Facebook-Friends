@@ -41,10 +41,13 @@
 		C3C1C30614DA3AA6005C32A7 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2FA14DA3AA6005C32A7 /* AFURLConnectionOperation.m */; };
 		C3C1C30714DA3AA6005C32A7 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2FC14DA3AA6005C32A7 /* AFXMLRequestOperation.m */; };
 		C3C1C30814DA3AA6005C32A7 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2FE14DA3AA6005C32A7 /* UIImageView+AFNetworking.m */; };
+		C3D45E6C14E286D900483727 /* FBFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D45E6B14E286D900483727 /* FBFriendList.m */; };
+		C3D45E6E14E289A800483727 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2F314DA3AA6005C32A7 /* AFJSONUtilities.m */; };
+		C3D45E7114E2912D00483727 /* FBFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D45E6B14E286D900483727 /* FBFriendList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C393310414E283EB00101A25 /* PBXContainerItemProxy */ = {
+		C3D45E6F14E28A3900483727 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C3C1C2BF14DA39EF005C32A7 /* Project object */;
 			proxyType = 1;
@@ -118,6 +121,8 @@
 		C3C1C2FC14DA3AA6005C32A7 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		C3C1C2FD14DA3AA6005C32A7 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		C3C1C2FE14DA3AA6005C32A7 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		C3D45E6A14E286D900483727 /* FBFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendList.h; sourceTree = "<group>"; };
+		C3D45E6B14E286D900483727 /* FBFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +259,8 @@
 				C3C1C2DF14DA39EF005C32A7 /* ViewController.m */,
 				C3C1C2E114DA39EF005C32A7 /* ViewController.xib */,
 				C3C1C2D314DA39EF005C32A7 /* Supporting Files */,
+				C3D45E6A14E286D900483727 /* FBFriendList.h */,
+				C3D45E6B14E286D900483727 /* FBFriendList.m */,
 			);
 			path = "My FB friends";
 			sourceTree = "<group>";
@@ -312,7 +319,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C393310514E283EB00101A25 /* PBXTargetDependency */,
+				C3D45E7014E28A3900483727 /* PBXTargetDependency */,
 			);
 			name = LogicUnitTests;
 			productName = LogicUnitTests;
@@ -406,6 +413,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C393310914E2843F00101A25 /* FBFriendListTests.m in Sources */,
+				C3D45E6E14E289A800483727 /* AFJSONUtilities.m in Sources */,
+				C3D45E7114E2912D00483727 /* FBFriendList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,16 +445,17 @@
 				C38C0E9814DFBE7900C883B7 /* SBJsonBase.m in Sources */,
 				C38C0E9914DFBE7900C883B7 /* SBJsonParser.m in Sources */,
 				C38C0E9A14DFBE7900C883B7 /* SBJsonWriter.m in Sources */,
+				C3D45E6C14E286D900483727 /* FBFriendList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C393310514E283EB00101A25 /* PBXTargetDependency */ = {
+		C3D45E7014E28A3900483727 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C3C1C2C714DA39EF005C32A7 /* My FB friends */;
-			targetProxy = C393310414E283EB00101A25 /* PBXContainerItemProxy */;
+			targetProxy = C3D45E6F14E28A3900483727 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
