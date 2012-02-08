@@ -18,6 +18,10 @@
 		C38C0E9814DFBE7900C883B7 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C0E8B14DFBE7900C883B7 /* SBJsonBase.m */; };
 		C38C0E9914DFBE7900C883B7 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C0E8D14DFBE7900C883B7 /* SBJsonParser.m */; };
 		C38C0E9A14DFBE7900C883B7 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C0E8F14DFBE7900C883B7 /* SBJsonWriter.m */; };
+		C39330D414E27D4D00101A25 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39330D314E27D4D00101A25 /* SenTestingKit.framework */; };
+		C39330D514E27D4D00101A25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */; };
+		C39330D614E27D4D00101A25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */; };
+		C39330DC14E27D4D00101A25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C39330DA14E27D4D00101A25 /* InfoPlist.strings */; };
 		C3C1C2CD14DA39EF005C32A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */; };
 		C3C1C2CF14DA39EF005C32A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */; };
 		C3C1C2D114DA39EF005C32A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2D014DA39EF005C32A7 /* CoreGraphics.framework */; };
@@ -37,6 +41,16 @@
 		C3C1C30714DA3AA6005C32A7 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2FC14DA3AA6005C32A7 /* AFXMLRequestOperation.m */; };
 		C3C1C30814DA3AA6005C32A7 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2FE14DA3AA6005C32A7 /* UIImageView+AFNetworking.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C393310414E283EB00101A25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3C1C2BF14DA39EF005C32A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3C1C2C714DA39EF005C32A7;
+			remoteInfo = "My FB friends";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C38C0E7814DFBE7900C883B7 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Facebook.h; path = "../facebook-ios-sdk/src/Facebook.h"; sourceTree = "<group>"; };
@@ -62,6 +76,11 @@
 		C38C0E8D14DFBE7900C883B7 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		C38C0E8E14DFBE7900C883B7 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		C38C0E8F14DFBE7900C883B7 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		C39330D214E27D4D00101A25 /* LogicUnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogicUnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C39330D314E27D4D00101A25 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C39330D914E27D4D00101A25 /* LogicUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicUnitTests-Info.plist"; sourceTree = "<group>"; };
+		C39330DB14E27D4D00101A25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C39330E014E27D4D00101A25 /* LogicUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogicUnitTests-Prefix.pch"; sourceTree = "<group>"; };
 		C3C1C2C814DA39EF005C32A7 /* My FB friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My FB friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,6 +118,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C39330CE14E27D4D00101A25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39330D414E27D4D00101A25 /* SenTestingKit.framework in Frameworks */,
+				C39330D514E27D4D00101A25 /* UIKit.framework in Frameworks */,
+				C39330D614E27D4D00101A25 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3C1C2C514DA39EF005C32A7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -162,11 +191,30 @@
 			path = ../AFNetworking/AFNetworking;
 			sourceTree = "<group>";
 		};
+		C39330D714E27D4D00101A25 /* LogicUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				C39330D814E27D4D00101A25 /* Supporting Files */,
+			);
+			path = LogicUnitTests;
+			sourceTree = "<group>";
+		};
+		C39330D814E27D4D00101A25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C39330D914E27D4D00101A25 /* LogicUnitTests-Info.plist */,
+				C39330DA14E27D4D00101A25 /* InfoPlist.strings */,
+				C39330E014E27D4D00101A25 /* LogicUnitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C3C1C2BD14DA39EF005C32A7 = {
 			isa = PBXGroup;
 			children = (
 				C3C1C2D214DA39EF005C32A7 /* My FB friends */,
 				C38C0E9D14DFBEDA00C883B7 /* Lib */,
+				C39330D714E27D4D00101A25 /* LogicUnitTests */,
 				C3C1C2CB14DA39EF005C32A7 /* Frameworks */,
 				C3C1C2C914DA39EF005C32A7 /* Products */,
 			);
@@ -176,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				C3C1C2C814DA39EF005C32A7 /* My FB friends.app */,
+				C39330D214E27D4D00101A25 /* LogicUnitTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +235,7 @@
 				C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */,
 				C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */,
 				C3C1C2D014DA39EF005C32A7 /* CoreGraphics.framework */,
+				C39330D314E27D4D00101A25 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -245,6 +295,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C39330D114E27D4D00101A25 /* LogicUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C39330E114E27D4D00101A25 /* Build configuration list for PBXNativeTarget "LogicUnitTests" */;
+			buildPhases = (
+				C39330CD14E27D4D00101A25 /* Sources */,
+				C39330CE14E27D4D00101A25 /* Frameworks */,
+				C39330CF14E27D4D00101A25 /* Resources */,
+				C39330D014E27D4D00101A25 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C393310514E283EB00101A25 /* PBXTargetDependency */,
+			);
+			name = LogicUnitTests;
+			productName = LogicUnitTests;
+			productReference = C39330D214E27D4D00101A25 /* LogicUnitTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		C3C1C2C714DA39EF005C32A7 /* My FB friends */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3C1C2E614DA39EF005C32A7 /* Build configuration list for PBXNativeTarget "My FB friends" */;
@@ -284,11 +353,20 @@
 			projectRoot = "";
 			targets = (
 				C3C1C2C714DA39EF005C32A7 /* My FB friends */,
+				C39330D114E27D4D00101A25 /* LogicUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C39330CF14E27D4D00101A25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C39330DC14E27D4D00101A25 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3C1C2C614DA39EF005C32A7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,7 +379,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C39330D014E27D4D00101A25 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		C39330CD14E27D4D00101A25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3C1C2C414DA39EF005C32A7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,7 +435,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C393310514E283EB00101A25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3C1C2C714DA39EF005C32A7 /* My FB friends */;
+			targetProxy = C393310414E283EB00101A25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		C39330DA14E27D4D00101A25 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C39330DB14E27D4D00101A25 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		C3C1C2D514DA39EF005C32A7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -354,6 +471,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C39330E214E27D4D00101A25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogicUnitTests/LogicUnitTests-Prefix.pch";
+				INFOPLIST_FILE = "LogicUnitTests/LogicUnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C39330E314E27D4D00101A25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LogicUnitTests/LogicUnitTests-Prefix.pch";
+				INFOPLIST_FILE = "LogicUnitTests/LogicUnitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		C3C1C2E414DA39EF005C32A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -426,6 +573,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C39330E114E27D4D00101A25 /* Build configuration list for PBXNativeTarget "LogicUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C39330E214E27D4D00101A25 /* Debug */,
+				C39330E314E27D4D00101A25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C3C1C2C214DA39EF005C32A7 /* Build configuration list for PBXProject "My FB friends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
