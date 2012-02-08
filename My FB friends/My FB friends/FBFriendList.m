@@ -28,6 +28,11 @@
     return [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture",[[friends objectAtIndex:index] valueForKey:@"id"] ]];
 }
 
+- (NSInteger) numberOfFriends
+{
+    return [friends count];
+}
+
 - (void)dealloc {
     [friends release];
     [super dealloc];

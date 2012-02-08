@@ -48,7 +48,11 @@
     STAssertEqualObjects([fbFriendList getProfilePictureURLAtIndex:0], [NSURL URLWithString:@"https://graph.facebook.com/1201503/picture"], @"");
     STAssertEqualObjects([fbFriendList getProfilePictureURLAtIndex:1], [NSURL URLWithString:@"https://graph.facebook.com/5123512/picture"], @"");
     STAssertEqualObjects([fbFriendList getProfilePictureURLAtIndex:2], [NSURL URLWithString:@"https://graph.facebook.com/1241245123/picture"], @"");
+}
 
+- (void)testNumberOfFriends
+{
+    STAssertEquals([fbFriendList numberOfFriends], 3, @"");
 }
 
 @end

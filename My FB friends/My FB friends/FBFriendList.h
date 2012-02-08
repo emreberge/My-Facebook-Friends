@@ -16,5 +16,6 @@
 - (id) initWithFriendsJSON:(id) friends;
 - (NSString*) getNameAtIndex:(NSInteger) index;
 - (NSURL*) getProfilePictureURLAtIndex:(NSInteger) index;
+- (NSInteger) numberOfFriends;
 
 @end
