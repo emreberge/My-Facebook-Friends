@@ -23,6 +23,11 @@
     return [[friends objectAtIndex:index] valueForKey:@"name"];
 }
 
+- (NSURL*) getProfilePictureURLAtIndex:(NSInteger) index
+{
+    return [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture",[[friends objectAtIndex:index] valueForKey:@"id"] ]];
+}
+
 - (void)dealloc {
     [friends release];
     [super dealloc];
