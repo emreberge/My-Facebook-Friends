@@ -18,7 +18,7 @@
     return self;
 }
 
-- (id) getNameAtIndex:(NSInteger) index
+- (NSString*) getNameAtIndex:(NSInteger) index
 {
     return [[friends objectAtIndex:index] valueForKey:@"name"];
 }

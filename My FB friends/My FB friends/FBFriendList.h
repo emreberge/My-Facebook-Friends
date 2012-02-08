@@ -14,6 +14,6 @@
 }
 
 - (id) initWithFriendsJSON:(id) friends;
-- (id) getNameAtIndex:(NSInteger) index;
+- (NSString*) getNameAtIndex:(NSInteger) index;
 
 @end
