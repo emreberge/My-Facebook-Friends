@@ -22,6 +22,7 @@
 		C39330D514E27D4D00101A25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */; };
 		C39330D614E27D4D00101A25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */; };
 		C39330DC14E27D4D00101A25 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C39330DA14E27D4D00101A25 /* InfoPlist.strings */; };
+		C393310914E2843F00101A25 /* FBFriendListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C393310814E2843F00101A25 /* FBFriendListTests.m */; };
 		C3C1C2CD14DA39EF005C32A7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */; };
 		C3C1C2CF14DA39EF005C32A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */; };
 		C3C1C2D114DA39EF005C32A7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3C1C2D014DA39EF005C32A7 /* CoreGraphics.framework */; };
@@ -81,6 +82,8 @@
 		C39330D914E27D4D00101A25 /* LogicUnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LogicUnitTests-Info.plist"; sourceTree = "<group>"; };
 		C39330DB14E27D4D00101A25 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C39330E014E27D4D00101A25 /* LogicUnitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LogicUnitTests-Prefix.pch"; sourceTree = "<group>"; };
+		C393310714E2843F00101A25 /* FBFriendListTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendListTests.h; sourceTree = "<group>"; };
+		C393310814E2843F00101A25 /* FBFriendListTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendListTests.m; sourceTree = "<group>"; };
 		C3C1C2C814DA39EF005C32A7 /* My FB friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My FB friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C1C2CC14DA39EF005C32A7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3C1C2CE14DA39EF005C32A7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -195,6 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				C39330D814E27D4D00101A25 /* Supporting Files */,
+				C393310714E2843F00101A25 /* FBFriendListTests.h */,
+				C393310814E2843F00101A25 /* FBFriendListTests.m */,
 			);
 			path = LogicUnitTests;
 			sourceTree = "<group>";
@@ -400,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C393310914E2843F00101A25 /* FBFriendListTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
