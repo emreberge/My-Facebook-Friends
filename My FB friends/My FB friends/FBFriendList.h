@@ -9,7 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface FBFriendList : NSObject
+{
+    id friends;
+}
 
 - (id) initWithFriendsJSON:(id) friends;
+- (id) getNameAtIndex:(NSInteger) index;
 
 @end

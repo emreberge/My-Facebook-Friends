@@ -10,11 +10,21 @@
 
 @implementation FBFriendList
 
-- (id) initWithFriendsJSON:(id) friends
+- (id) initWithFriendsJSON:(id) friendsJSON
 {
     if(self = [super init]) {
-        
+        friends = [[friendsJSON retain] valueForKey:@"data"];
     }
     return self;
+}
+
+- (id) getNameAtIndex:(NSInteger) index
+{
+    return [[friends objectAtIndex:index] valueForKey:@"name"];
+}
+
+- (void)dealloc {
+    [friends release];
+    [super dealloc];
 }
 @end

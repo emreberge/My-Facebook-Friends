@@ -20,7 +20,7 @@
     id friendsJSON = AFJSONDecode([kExampleFBFriendsJSON dataUsingEncoding:NSUTF8StringEncoding], &error);
     STAssertNotNil(friendsJSON, @"Could not create an JSON object");
     NSLog(@"%@", kExampleFBFriendsJSON);
-    fbFriendList = [[FBFriendList alloc] initWithFriendsJSON:friendsJSON];
+    fbFriendList = [[[FBFriendList alloc] initWithFriendsJSON:friendsJSON] retain];
     STAssertNotNil(fbFriendList, @"Failed to create FBFriendsList object");
 }
 
@@ -33,6 +33,14 @@
 - (void)testInit
 {
     // Intentionaly empty to trigger a setUp.
+}
+
+- (void)testGetNameAtIndex
+{
+    STAssertEqualObjects([fbFriendList getNameAtIndex:0],  @"Adam Smith",@"");
+    STAssertEqualObjects([fbFriendList getNameAtIndex:1],  @"George Lucas",@"");
+    STAssertEqualObjects([fbFriendList getNameAtIndex:2],  @"Erlang Pascal",@"");
+
 }
 
 @end
