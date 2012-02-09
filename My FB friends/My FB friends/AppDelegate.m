@@ -49,7 +49,7 @@
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.myFriendsListTableController = [[MyFriendsListTableController alloc] initWithStyle:UITableViewStyleGrouped];
+    self.myFriendsListTableController = [[[MyFriendsListTableController alloc] initWithStyle:UITableViewStyleGrouped] autorelease];
     self.window.rootViewController = self.myFriendsListTableController;
     [self.window makeKeyAndVisible];
     return YES;
