@@ -29,8 +29,6 @@
 		C3C1C2D714DA39EF005C32A7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3C1C2D514DA39EF005C32A7 /* InfoPlist.strings */; };
 		C3C1C2D914DA39EF005C32A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2D814DA39EF005C32A7 /* main.m */; };
 		C3C1C2DD14DA39EF005C32A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */; };
-		C3C1C2E014DA39EF005C32A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2DF14DA39EF005C32A7 /* ViewController.m */; };
-		C3C1C2E314DA39EF005C32A7 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3C1C2E114DA39EF005C32A7 /* ViewController.xib */; };
 		C3C1C2FF14DA3AA6005C32A7 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2EB14DA3AA6005C32A7 /* AFHTTPClient.m */; };
 		C3C1C30014DA3AA6005C32A7 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2ED14DA3AA6005C32A7 /* AFHTTPRequestOperation.m */; };
 		C3C1C30114DA3AA6005C32A7 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2EF14DA3AA6005C32A7 /* AFImageRequestOperation.m */; };
@@ -44,6 +42,8 @@
 		C3D45E6C14E286D900483727 /* FBFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D45E6B14E286D900483727 /* FBFriendList.m */; };
 		C3D45E6E14E289A800483727 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2F314DA3AA6005C32A7 /* AFJSONUtilities.m */; };
 		C3D45E7114E2912D00483727 /* FBFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D45E6B14E286D900483727 /* FBFriendList.m */; };
+		C3EA460014E3A8F20039EE1A /* MyFriendsListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */; };
+		C3EA460114E3A8F20039EE1A /* MyFriendsListTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,9 +97,6 @@
 		C3C1C2DA14DA39EF005C32A7 /* My FB friends-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "My FB friends-Prefix.pch"; sourceTree = "<group>"; };
 		C3C1C2DB14DA39EF005C32A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C3C1C2DE14DA39EF005C32A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C3C1C2DF14DA39EF005C32A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C3C1C2E214DA39EF005C32A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		C3C1C2EA14DA3AA6005C32A7 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		C3C1C2EB14DA3AA6005C32A7 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		C3C1C2EC14DA3AA6005C32A7 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -123,6 +120,9 @@
 		C3C1C2FE14DA3AA6005C32A7 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		C3D45E6A14E286D900483727 /* FBFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendList.h; sourceTree = "<group>"; };
 		C3D45E6B14E286D900483727 /* FBFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendList.m; sourceTree = "<group>"; };
+		C3EA45FD14E3A8F20039EE1A /* MyFriendsListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFriendsListTableController.h; sourceTree = "<group>"; };
+		C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFriendsListTableController.m; sourceTree = "<group>"; };
+		C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFriendsListTableController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +222,9 @@
 		C3C1C2BD14DA39EF005C32A7 = {
 			isa = PBXGroup;
 			children = (
+				C3EA45FD14E3A8F20039EE1A /* MyFriendsListTableController.h */,
+				C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */,
+				C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */,
 				C3C1C2D214DA39EF005C32A7 /* My FB friends */,
 				C38C0E9D14DFBEDA00C883B7 /* Lib */,
 				C39330D714E27D4D00101A25 /* LogicUnitTests */,
@@ -255,9 +258,6 @@
 			children = (
 				C3C1C2DB14DA39EF005C32A7 /* AppDelegate.h */,
 				C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */,
-				C3C1C2DE14DA39EF005C32A7 /* ViewController.h */,
-				C3C1C2DF14DA39EF005C32A7 /* ViewController.m */,
-				C3C1C2E114DA39EF005C32A7 /* ViewController.xib */,
 				C3C1C2D314DA39EF005C32A7 /* Supporting Files */,
 				C3D45E6A14E286D900483727 /* FBFriendList.h */,
 				C3D45E6B14E286D900483727 /* FBFriendList.m */,
@@ -384,8 +384,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3C1C2D714DA39EF005C32A7 /* InfoPlist.strings in Resources */,
-				C3C1C2E314DA39EF005C32A7 /* ViewController.xib in Resources */,
 				C38C0E9114DFBE7900C883B7 /* FBDialog.bundle in Resources */,
+				C3EA460114E3A8F20039EE1A /* MyFriendsListTableController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +424,6 @@
 			files = (
 				C3C1C2D914DA39EF005C32A7 /* main.m in Sources */,
 				C3C1C2DD14DA39EF005C32A7 /* AppDelegate.m in Sources */,
-				C3C1C2E014DA39EF005C32A7 /* ViewController.m in Sources */,
 				C3C1C2FF14DA3AA6005C32A7 /* AFHTTPClient.m in Sources */,
 				C3C1C30014DA3AA6005C32A7 /* AFHTTPRequestOperation.m in Sources */,
 				C3C1C30114DA3AA6005C32A7 /* AFImageRequestOperation.m in Sources */,
@@ -446,6 +445,7 @@
 				C38C0E9914DFBE7900C883B7 /* SBJsonParser.m in Sources */,
 				C38C0E9A14DFBE7900C883B7 /* SBJsonWriter.m in Sources */,
 				C3D45E6C14E286D900483727 /* FBFriendList.m in Sources */,
+				C3EA460014E3A8F20039EE1A /* MyFriendsListTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,14 +474,6 @@
 				C3C1C2D614DA39EF005C32A7 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C3C1C2E114DA39EF005C32A7 /* ViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C3C1C2E214DA39EF005C32A7 /* en */,
-			);
-			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

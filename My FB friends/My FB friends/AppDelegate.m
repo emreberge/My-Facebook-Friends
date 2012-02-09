@@ -7,19 +7,19 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import "AFJSONRequestOperation.h"
+#import "FBFriendList.h"
 
 @implementation AppDelegate
 
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize myFriendsListTableController = _myFriendsListTableController;
 @synthesize facebook = _facebook;
 
 - (void)dealloc
 {
     [_window release];
-    [_viewController release];
+    [_myFriendsListTableController release];
     [_facebook release];
     [super dealloc];
 }
@@ -49,8 +49,8 @@
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
-    self.window.rootViewController = self.viewController;
+    self.myFriendsListTableController = [[MyFriendsListTableController alloc] initWithStyle:UITableViewStyleGrouped];
+    self.window.rootViewController = self.myFriendsListTableController;
     [self.window makeKeyAndVisible];
     return YES;
 }
