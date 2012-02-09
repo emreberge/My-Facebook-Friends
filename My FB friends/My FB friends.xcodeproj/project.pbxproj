@@ -149,6 +149,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C320E3A314E3BF220009100E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		C38C0E8214DFBE7900C883B7 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,9 +230,10 @@
 			isa = PBXGroup;
 			children = (
 				C3C1C2D214DA39EF005C32A7 /* My FB friends */,
-				C38C0E9D14DFBEDA00C883B7 /* Lib */,
 				C39330D714E27D4D00101A25 /* LogicUnitTests */,
+				C320E3A314E3BF220009100E /* Resources */,
 				C3C1C2CB14DA39EF005C32A7 /* Frameworks */,
+				C38C0E9D14DFBEDA00C883B7 /* Lib */,
 				C3C1C2C914DA39EF005C32A7 /* Products */,
 			);
 			sourceTree = "<group>";
