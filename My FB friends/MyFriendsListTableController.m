@@ -7,6 +7,7 @@
 //
 
 #import "MyFriendsListTableController.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation MyFriendsListTableController
 
@@ -108,6 +109,8 @@
     }
     
     cell.textLabel.text = [self.fbFriendList getNameAtIndex:indexPath.row];
+    [cell.imageView setImageWithURL:[self.fbFriendList getProfilePictureURLAtIndex:indexPath.row] placeholderImage:[UIImage imageNamed:@"fb.png"]];
+    
     
     return cell;
 }

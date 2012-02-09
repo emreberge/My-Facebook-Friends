@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C320E3A514E3BF6D0009100E /* fb.png in Resources */ = {isa = PBXBuildFile; fileRef = C320E3A414E3BF6D0009100E /* fb.png */; };
 		C38C0E9014DFBE7900C883B7 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C0E7914DFBE7900C883B7 /* Facebook.m */; };
 		C38C0E9114DFBE7900C883B7 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C38C0E7B14DFBE7900C883B7 /* FBDialog.bundle */; };
 		C38C0E9214DFBE7900C883B7 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C0E7D14DFBE7900C883B7 /* FBDialog.m */; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C320E3A414E3BF6D0009100E /* fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb.png; sourceTree = "<group>"; };
 		C38C0E7814DFBE7900C883B7 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Facebook.h; path = "../facebook-ios-sdk/src/Facebook.h"; sourceTree = "<group>"; };
 		C38C0E7914DFBE7900C883B7 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Facebook.m; path = "../facebook-ios-sdk/src/Facebook.m"; sourceTree = "<group>"; };
 		C38C0E7A14DFBE7900C883B7 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBConnect.h; path = "../facebook-ios-sdk/src/FBConnect.h"; sourceTree = "<group>"; };
@@ -120,7 +122,7 @@
 		C3C1C2FE14DA3AA6005C32A7 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		C3D45E6A14E286D900483727 /* FBFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendList.h; sourceTree = "<group>"; };
 		C3D45E6B14E286D900483727 /* FBFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendList.m; sourceTree = "<group>"; };
-		C3EA45FD14E3A8F20039EE1A /* MyFriendsListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = MyFriendsListTableController.h; path = ../MyFriendsListTableController.h; sourceTree = "<group>"; };
+		C3EA45FD14E3A8F20039EE1A /* MyFriendsListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyFriendsListTableController.h; path = ../MyFriendsListTableController.h; sourceTree = "<group>"; };
 		C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyFriendsListTableController.m; path = ../MyFriendsListTableController.m; sourceTree = "<group>"; };
 		C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyFriendsListTableController.xib; path = ../MyFriendsListTableController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +154,7 @@
 		C320E3A314E3BF220009100E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C320E3A414E3BF6D0009100E /* fb.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				C3C1C2D714DA39EF005C32A7 /* InfoPlist.strings in Resources */,
 				C38C0E9114DFBE7900C883B7 /* FBDialog.bundle in Resources */,
 				C3EA460114E3A8F20039EE1A /* MyFriendsListTableController.xib in Resources */,
+				C320E3A514E3BF6D0009100E /* fb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
