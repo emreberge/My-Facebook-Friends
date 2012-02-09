@@ -120,9 +120,9 @@
 		C3C1C2FE14DA3AA6005C32A7 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		C3D45E6A14E286D900483727 /* FBFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendList.h; sourceTree = "<group>"; };
 		C3D45E6B14E286D900483727 /* FBFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendList.m; sourceTree = "<group>"; };
-		C3EA45FD14E3A8F20039EE1A /* MyFriendsListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFriendsListTableController.h; sourceTree = "<group>"; };
-		C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFriendsListTableController.m; sourceTree = "<group>"; };
-		C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFriendsListTableController.xib; sourceTree = "<group>"; };
+		C3EA45FD14E3A8F20039EE1A /* MyFriendsListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = MyFriendsListTableController.h; path = ../MyFriendsListTableController.h; sourceTree = "<group>"; };
+		C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyFriendsListTableController.m; path = ../MyFriendsListTableController.m; sourceTree = "<group>"; };
+		C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyFriendsListTableController.xib; path = ../MyFriendsListTableController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,9 +222,6 @@
 		C3C1C2BD14DA39EF005C32A7 = {
 			isa = PBXGroup;
 			children = (
-				C3EA45FD14E3A8F20039EE1A /* MyFriendsListTableController.h */,
-				C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */,
-				C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */,
 				C3C1C2D214DA39EF005C32A7 /* My FB friends */,
 				C38C0E9D14DFBEDA00C883B7 /* Lib */,
 				C39330D714E27D4D00101A25 /* LogicUnitTests */,
@@ -256,6 +253,9 @@
 		C3C1C2D214DA39EF005C32A7 /* My FB friends */ = {
 			isa = PBXGroup;
 			children = (
+				C3EA45FD14E3A8F20039EE1A /* MyFriendsListTableController.h */,
+				C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */,
+				C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */,
 				C3C1C2DB14DA39EF005C32A7 /* AppDelegate.h */,
 				C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */,
 				C3C1C2D314DA39EF005C32A7 /* Supporting Files */,
