@@ -27,6 +27,19 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+#pragma mark - Properties
+
+@synthesize fbFriendList=_fbFriendList;
+
+- (void)setFbFriendList:(FBFriendList *)fbFriendList
+{
+    if(fbFriendList !=_fbFriendList) {
+        [_fbFriendList release];
+        _fbFriendList = [fbFriendList retain];
+        [self.tableView reloadData];
+    }
+}
+
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
@@ -77,16 +90,12 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [self.fbFriendList numberOfFriends];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -98,7 +107,7 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    // Configure the cell...
+    cell.textLabel.text = [self.fbFriendList getNameAtIndex:indexPath.row];
     
     return cell;
 }
