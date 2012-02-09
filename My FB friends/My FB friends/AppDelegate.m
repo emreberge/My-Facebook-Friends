@@ -10,6 +10,12 @@
 #import "AFJSONRequestOperation.h"
 #import "FBFriendList.h"
 
+@interface AppDelegate()
+
+- (void)setFBListForMyfriendsListTableController;
+
+@end
+
 @implementation AppDelegate
 
 @synthesize window = _window;
@@ -46,6 +52,7 @@
     self.facebook = [[Facebook alloc] initWithAppId:@"379633892050184" andDelegate:self];
     [self checkUserDefaultsForFacebookAccessToken];
     [self makeSureFacebookSessionIsValid];
+    [self setFBListForMyfriendsListTableController];
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
@@ -112,6 +119,8 @@
     [defaults setObject:self.facebook.accessToken forKey:@"FBAccessTokenKey"];
     [defaults setObject:self.facebook.expirationDate forKey:@"FBExpirationDateKey"];
     [defaults synchronize];
+    
+    [self setFBListForMyfriendsListTableController];
 }
 
 - (void)fbDidNotLogin:(BOOL)cancelled
@@ -134,6 +143,22 @@
     
 }
 
+#pragma mark - Private methods
+
+- (void)setFBListForMyfriendsListTableController
+{
+    if([self.facebook accessToken]) {
+        NSURL *url = [NSURL URLWithString:[@"https://graph.facebook.com/me/friends?access_token=" stringByAppendingString:self.facebook.accessToken]];
+        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        
+        AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+            self.myFriendsListTableController.fbFriendList = [[[FBFriendList alloc] initWithFriendsJSON:JSON] autorelease];
+        } failure:nil];
+        
+        [operation start];
+    }
+
+}
 
 
 @end
