@@ -18,9 +18,14 @@
     return self;
 }
 
+- (NSString*) nameFromPersonJSON:(id) personJSON
+{
+    return [personJSON valueForKey:@"name"];
+}
+
 - (NSString*) getNameAtIndex:(NSInteger) index
 {
-    return [[friends objectAtIndex:index] valueForKey:@"name"];
+    return [self nameFromPersonJSON:[friends objectAtIndex:index]];
 }
 
 - (NSURL*) getProfilePictureURLAtIndex:(NSInteger) index

@@ -12,7 +12,11 @@
 @interface FBFriendListTests : SenTestCase
 {
     FBFriendList* fbFriendList;
+    id personJSON;
 }
 
+@end
 
+@interface FBFriendList(test)
+- (NSString*) nameFromPersonJSON:(id) personJSON;
 @end

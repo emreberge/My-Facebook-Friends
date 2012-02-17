@@ -11,15 +11,25 @@
 
 #define kExampleFBFriendsJSON @"{ \"data\": [{\"name\": \"Adam Smith\", \"id\": \"1201503\"},{\"name\": \"George Lucas\", \"id\": \"5123512\"},{\"name\": \"Erlang Pascal\",\"id\": \"1241245123\"}],\"paging\": {\"next\": \"https://graph.facebook.com/688752050/friends?format=json&limit=500&offset=500&__after_id=100202253318773\"}}"
 
+#define kExampleFBPersonJSON @"{\"name\": \"Adam Smith\", \"id\": \"1201503\"}"
+
 @implementation FBFriendListTests
+
+- (id)jsonFromString:(NSString*) string
+{
+    NSError *error = nil;
+    return AFJSONDecode([string dataUsingEncoding:NSUTF8StringEncoding], &error);
+}
 
 - (void)setUp
 {
     [super setUp];
-    NSError *error = nil;
-    id friendsJSON = AFJSONDecode([kExampleFBFriendsJSON dataUsingEncoding:NSUTF8StringEncoding], &error);
-    STAssertNotNil(friendsJSON, @"Could not create an JSON object");
-    NSLog(@"%@", kExampleFBFriendsJSON);
+    id friendsJSON = [self jsonFromString:kExampleFBFriendsJSON];
+    STAssertNotNil(friendsJSON, @"Could not create an JSON Friends object");
+    
+    personJSON = [[self jsonFromString:kExampleFBPersonJSON] retain];
+    STAssertNotNil(personJSON, @"Could not create an JSON person object");
+    
     fbFriendList = [[FBFriendList alloc] initWithFriendsJSON:friendsJSON];
     STAssertNotNil(fbFriendList, @"Failed to create FBFriendsList object");
 }
@@ -27,6 +37,7 @@
 - (void)tearDown
 {
     [fbFriendList release];
+    [personJSON release];
     [super tearDown];
 }
 
@@ -53,6 +64,11 @@
 - (void)testNumberOfFriends
 {
     STAssertEquals([fbFriendList numberOfFriends], 3, @"");
+}
+
+-(void)testNameFromPersonJSON
+{
+    STAssertEqualObjects([fbFriendList nameFromPersonJSON:personJSON], @"Adam Smith", @"");
 }
 
 @end
