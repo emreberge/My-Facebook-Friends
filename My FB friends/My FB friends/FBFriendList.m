@@ -13,7 +13,8 @@
 - (id) initWithFriendsJSON:(id) friendsJSON
 {
     if(self = [super init]) {
-        friends = [[friendsJSON retain] valueForKey:@"data"];
+        friends = [friendsJSON valueForKey:@"data"];
+        [friends retain];
     }
     return self;
 }
