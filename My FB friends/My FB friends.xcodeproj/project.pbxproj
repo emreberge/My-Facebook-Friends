@@ -269,9 +269,9 @@
 				C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */,
 				C3C1C2DB14DA39EF005C32A7 /* AppDelegate.h */,
 				C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */,
-				C3C1C2D314DA39EF005C32A7 /* Supporting Files */,
 				C3D45E6A14E286D900483727 /* FBFriendList.h */,
 				C3D45E6B14E286D900483727 /* FBFriendList.m */,
+				C3C1C2D314DA39EF005C32A7 /* Supporting Files */,
 			);
 			path = "My FB friends";
 			sourceTree = "<group>";
