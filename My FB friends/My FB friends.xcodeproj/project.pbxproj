@@ -366,7 +366,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
-				ORGANIZATIONNAME = "Bontouch AB, Codely HB";
+				ORGANIZATIONNAME = "Emre Berge Ergenekon";
 			};
 			buildConfigurationList = C3C1C2C214DA39EF005C32A7 /* Build configuration list for PBXProject "My FB friends" */;
 			compatibilityVersion = "Xcode 3.2";
