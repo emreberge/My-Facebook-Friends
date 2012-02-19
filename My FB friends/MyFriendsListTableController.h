@@ -12,5 +12,6 @@
 @interface MyFriendsListTableController : UITableViewController
 
 @property (nonatomic, retain) NSArray *fbFriends;
+@property (nonatomic, retain) NSArray *tableSections;
 
 @end

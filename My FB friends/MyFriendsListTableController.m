@@ -9,7 +9,15 @@
 #import "MyFriendsListTableController.h"
 #import "UIImageView+AFNetworking.h"
 
+@interface MyFriendsListTableController()
+- (void) reorder;
+@end
+
 @implementation MyFriendsListTableController
+
+@synthesize fbFriends=_fbFriends;
+@synthesize tableSections=_tableSections;
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -28,22 +36,47 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - Properties
 - (void)dealloc
 {
     [_fbFriends release];
+    [_tableSections release];
     [super release];
 }
 
-@synthesize fbFriends=_fbFriends;
+#pragma mark - Properties
 
 - (void)setFbFriends:(NSArray *) fbFriends
 {
     if(fbFriends != _fbFriends) {
         [_fbFriends release];
         _fbFriends = [fbFriends retain];
+        [self reorder];
         [self.tableView reloadData];
     }
+}
+
+- (void) reorder
+{
+    NSMutableArray *tableSections = [NSMutableArray array];
+    UILocalizedIndexedCollation *currentCollation = [UILocalizedIndexedCollation currentCollation];
+    for (id person in self.fbFriends) {
+        NSInteger sectionNumber = [currentCollation sectionForObject:person collationStringSelector:@selector(name)];
+        NSInteger currentNumberOfSections = [tableSections count];
+        
+        if (currentNumberOfSections <= sectionNumber) {
+            for (NSInteger index = currentNumberOfSections; index <= sectionNumber; index++) {
+                [tableSections addObject:[NSMutableArray array]];
+            }
+        }
+        
+        [[tableSections objectAtIndex:sectionNumber] addObject:person];
+    }
+    
+    for (NSInteger index = 0; index < [tableSections count] ; index++) {
+        [tableSections replaceObjectAtIndex:index withObject:[currentCollation sortedArrayFromArray:[tableSections objectAtIndex:index] collationStringSelector:@selector(name)]];
+    }
+    
+    self.tableSections = tableSections;
 }
 
 #pragma mark - View lifecycle
@@ -96,13 +129,34 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return [self.tableSections count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.fbFriends count];
+    return [[self.tableSections objectAtIndex:section] count];
 }
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return [[UILocalizedIndexedCollation currentCollation] sectionIndexTitles];
+}
+
+- (NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if ([[self.tableSections objectAtIndex:section] count]) {
+        return [[[UILocalizedIndexedCollation currentCollation] sectionTitles] objectAtIndex:section];
+    } else {
+        return nil;
+    }
+
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index
+{
+    return [[UILocalizedIndexedCollation currentCollation] sectionForSectionIndexTitleAtIndex:index];
+}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -113,9 +167,10 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    cell.textLabel.text = [[self.fbFriends objectAtIndex:indexPath.row] name];
-    [cell.imageView setImageWithURL:[[self.fbFriends objectAtIndex:indexPath.row] profilePictureURL] placeholderImage:[UIImage imageNamed:@"fb.png"]];
+    id person = [[self.tableSections objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
     
+    cell.textLabel.text = [person name];
+    [cell.imageView setImageWithURL:[person profilePictureURL] placeholderImage:[UIImage imageNamed:@"fb.png"]];
     
     return cell;
 }
