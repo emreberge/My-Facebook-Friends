@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C320E3A514E3BF6D0009100E /* fb.png in Resources */ = {isa = PBXBuildFile; fileRef = C320E3A414E3BF6D0009100E /* fb.png */; };
+		C32BC02B14F11416000061F6 /* UILocalizedIndexedCollation+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = C32BC02A14F11416000061F6 /* UILocalizedIndexedCollation+Util.m */; };
 		C38C0E9014DFBE7900C883B7 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C0E7914DFBE7900C883B7 /* Facebook.m */; };
 		C38C0E9114DFBE7900C883B7 /* FBDialog.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C38C0E7B14DFBE7900C883B7 /* FBDialog.bundle */; };
 		C38C0E9214DFBE7900C883B7 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = C38C0E7D14DFBE7900C883B7 /* FBDialog.m */; };
@@ -59,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		C320E3A414E3BF6D0009100E /* fb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb.png; sourceTree = "<group>"; };
+		C32BC02914F11416000061F6 /* UILocalizedIndexedCollation+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILocalizedIndexedCollation+Util.h"; sourceTree = "<group>"; };
+		C32BC02A14F11416000061F6 /* UILocalizedIndexedCollation+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILocalizedIndexedCollation+Util.m"; sourceTree = "<group>"; };
 		C38C0E7814DFBE7900C883B7 /* Facebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Facebook.h; path = "../facebook-ios-sdk/src/Facebook.h"; sourceTree = "<group>"; };
 		C38C0E7914DFBE7900C883B7 /* Facebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Facebook.m; path = "../facebook-ios-sdk/src/Facebook.m"; sourceTree = "<group>"; };
 		C38C0E7A14DFBE7900C883B7 /* FBConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBConnect.h; path = "../facebook-ios-sdk/src/FBConnect.h"; sourceTree = "<group>"; };
@@ -271,6 +274,8 @@
 				C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */,
 				C3D45E6A14E286D900483727 /* NSDictionary+FBFriendList.h */,
 				C3D45E6B14E286D900483727 /* NSDictionary+FBFriendList.m */,
+				C32BC02914F11416000061F6 /* UILocalizedIndexedCollation+Util.h */,
+				C32BC02A14F11416000061F6 /* UILocalizedIndexedCollation+Util.m */,
 				C3C1C2D314DA39EF005C32A7 /* Supporting Files */,
 			);
 			path = "My FB friends";
@@ -458,6 +463,7 @@
 				C38C0E9A14DFBE7900C883B7 /* SBJsonWriter.m in Sources */,
 				C3D45E6C14E286D900483727 /* NSDictionary+FBFriendList.m in Sources */,
 				C3EA460014E3A8F20039EE1A /* MyFriendsListTableController.m in Sources */,
+				C32BC02B14F11416000061F6 /* UILocalizedIndexedCollation+Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

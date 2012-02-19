@@ -8,10 +8,7 @@
 
 #import "MyFriendsListTableController.h"
 #import "UIImageView+AFNetworking.h"
-
-@interface MyFriendsListTableController()
-- (NSArray *) indexedFbFriends:(NSArray *) fbFriends;
-@end
+#import "UILocalizedIndexedCollation+Util.h"
 
 @implementation MyFriendsListTableController
 
@@ -43,32 +40,8 @@
 - (void)setDisplayedFriends:(NSArray *) listOfFriends
 {
     [_fbFriends release];
-    _fbFriends = [[self indexedFbFriends:listOfFriends] retain];
+    _fbFriends = [[UILocalizedIndexedCollation collateObjects:listOfFriends usingCollationStringSelector:@selector(name)] retain];
     [self.tableView reloadData];
-}
-
-- (NSArray *) indexedFbFriends:(NSArray *) fbFriends
-{
-    NSMutableArray *indexedFbFriends = [NSMutableArray array];
-    UILocalizedIndexedCollation *currentCollation = [UILocalizedIndexedCollation currentCollation];
-    for (id person in fbFriends) {
-        NSInteger sectionNumber = [currentCollation sectionForObject:person collationStringSelector:@selector(name)];
-        NSInteger currentNumberOfSections = [indexedFbFriends count];
-        
-        if (currentNumberOfSections <= sectionNumber) {
-            for (NSInteger index = currentNumberOfSections; index <= sectionNumber; index++) {
-                [indexedFbFriends addObject:[NSMutableArray array]];
-            }
-        }
-        
-        [[indexedFbFriends objectAtIndex:sectionNumber] addObject:person];
-    }
-    
-    for (NSInteger index = 0; index < [indexedFbFriends count] ; index++) {
-        [indexedFbFriends replaceObjectAtIndex:index withObject:[currentCollation sortedArrayFromArray:[indexedFbFriends objectAtIndex:index] collationStringSelector:@selector(name)]];
-    }
-    
-    return indexedFbFriends;
 }
 
 #pragma mark - View lifecycle
