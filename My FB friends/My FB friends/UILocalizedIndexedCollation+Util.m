@@ -8,28 +8,47 @@
 
 #import "UILocalizedIndexedCollation+Util.h"
 
+@interface UILocalizedIndexedCollation ()
+
++ (void) makeSureMutableArray:(NSMutableArray *) array hasIndex:(NSInteger) index;
++ (NSMutableArray *) divideObjects:(NSArray *) objects intoSectionsUsingCollationStringSelector:(SEL) selector andCollation:(UILocalizedIndexedCollation *) collation;
++ (void) sortDividedObjects:(NSMutableArray *) dividedObjects usingCollationStringSelector:(SEL) selector andCollation:(UILocalizedIndexedCollation *) currentCollation;
+
+@end
+
 @implementation UILocalizedIndexedCollation (Util)
 
 + (NSArray *) collateObjects:(NSArray *) objects usingCollationStringSelector:(SEL) selector
 {
-    NSMutableArray *collatedObjects = [NSMutableArray array];
     UILocalizedIndexedCollation *currentCollation = [UILocalizedIndexedCollation currentCollation];
-    
-    for (id object in objects) {
-        NSInteger sectionIndex = [currentCollation sectionForObject:object collationStringSelector:selector];        
-        
-        while([collatedObjects count] <= sectionIndex)
-            [collatedObjects addObject:[NSMutableArray array]];
-        
-        [[collatedObjects objectAtIndex:sectionIndex] addObject:object];
-    }
-    
-    for (NSInteger index = 0; index < [collatedObjects count] ; index++) {
-        [collatedObjects replaceObjectAtIndex:index withObject:[currentCollation sortedArrayFromArray:[collatedObjects objectAtIndex:index] collationStringSelector:@selector(name)]];
-    }
-    
+    NSMutableArray *collatedObjects = [self divideObjects:objects intoSectionsUsingCollationStringSelector:selector andCollation:currentCollation];
+    [self sortDividedObjects:collatedObjects usingCollationStringSelector:selector andCollation:currentCollation];
     return collatedObjects;
+}
+
++ (NSMutableArray *) divideObjects:(NSArray *) objects intoSectionsUsingCollationStringSelector:(SEL) selector andCollation:(UILocalizedIndexedCollation *) collation
+{
+    NSMutableArray *dividedObjects = [NSMutableArray array];
+    for (id object in objects){
+        NSInteger sectionIndex = [collation sectionForObject:object collationStringSelector:selector];
+        [self makeSureMutableArray:dividedObjects hasIndex:sectionIndex];
+        [[dividedObjects objectAtIndex:sectionIndex] addObject:object];
+    }
+    return dividedObjects;
     
 }
 
++ (void) makeSureMutableArray:(NSMutableArray *) array hasIndex:(NSInteger) index
+{
+    while([array count] <= index)
+        [array addObject:[NSMutableArray array]];
+    
+}
+
++ (void) sortDividedObjects:(NSMutableArray*) dividedObjects usingCollationStringSelector:(SEL) selector andCollation:(UILocalizedIndexedCollation*) currentCollation
+{
+    for (NSInteger index = 0; index < [dividedObjects count] ; index++) {
+        [dividedObjects replaceObjectAtIndex:index withObject:[currentCollation sortedArrayFromArray:[dividedObjects objectAtIndex:index] collationStringSelector:selector]];
+    }
+} 
 @end
