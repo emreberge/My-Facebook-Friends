@@ -10,8 +10,11 @@
 #import "NSDictionary+FBFriendList.h"
 
 @interface MyFriendsListTableController : UITableViewController
+{
+    @private
+    NSArray *_fbFriends;
+}
 
-@property (nonatomic, retain) NSArray *fbFriends;
-@property (nonatomic, retain) NSArray *tableSections;
+- (void)setDisplayedFriends:(NSArray *) fbFriends;
 
 @end

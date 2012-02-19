@@ -152,7 +152,7 @@
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-            self.myFriendsListTableController.fbFriends = [JSON friendsFromJSON];
+            [self.myFriendsListTableController setDisplayedFriends:[JSON friendsFromJSON]];
         } failure:nil];
         
         [operation start];
