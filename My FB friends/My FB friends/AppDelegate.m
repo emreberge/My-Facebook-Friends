@@ -49,7 +49,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.facebook = [[Facebook alloc] initWithAppId:@"379633892050184" andDelegate:self];
+    self.facebook = [[[Facebook alloc] initWithAppId:@"379633892050184" andDelegate:self] autorelease];
     [self checkUserDefaultsForFacebookAccessToken];
     [self makeSureFacebookSessionIsValid];
     [self setFBListForMyfriendsListTableController];
