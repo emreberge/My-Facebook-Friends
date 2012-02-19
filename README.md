@@ -1,6 +1,8 @@
 My Facebook Friends
 ===================
 
+An example project for displaying an indexed localized facebook friends list using AFNetworking library and facebook-io-sdk.
+
 Getting Started
 ---------------
 
