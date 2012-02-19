@@ -8,6 +8,8 @@
 
 #import "FBFriendListTests.h"
 #import "AFJSONUtilities.h"
+#import "NSDictionary+FBFriendList.h"
+
 
 #define kExampleFBFriendsJSON @"{ \"data\": [{\"name\": \"Adam Smith\", \"id\": \"1201503\"},{\"name\": \"George Lucas\", \"id\": \"5123512\"},{\"name\": \"Erlang Pascal\",\"id\": \"1241245123\"}],\"paging\": {\"next\": \"https://graph.facebook.com/688752050/friends?format=json&limit=500&offset=500&__after_id=100202253318773\"}}"
 
@@ -26,18 +28,14 @@
     [super setUp];
     id friendsJSON = [self jsonFromString:kExampleFBFriendsJSON];
     STAssertNotNil(friendsJSON, @"Could not create an JSON Friends object");
-    
-    personJSON = [[self jsonFromString:kExampleFBPersonJSON] retain];
-    STAssertNotNil(personJSON, @"Could not create an JSON person object");
-    
-    fbFriendList = [[FBFriendList alloc] initWithFriendsJSON:friendsJSON];
-    STAssertNotNil(fbFriendList, @"Failed to create FBFriendsList object");
+        
+    fbFriends = [[friendsJSON friendsFromJSON] retain];
+    STAssertNotNil(fbFriends, @"Failed to create fbFriends object");
 }
 
 - (void)tearDown
 {
-    [fbFriendList release];
-    [personJSON release];
+    [fbFriends release];
     [super tearDown];
 }
 
@@ -46,29 +44,24 @@
     // Intentionaly empty to trigger a setUp.
 }
 
-- (void)testGetNameAtIndex
+- (void)testNames
 {
-    STAssertEqualObjects([fbFriendList getNameAtIndex:0],  @"Adam Smith",@"");
-    STAssertEqualObjects([fbFriendList getNameAtIndex:1],  @"George Lucas",@"");
-    STAssertEqualObjects([fbFriendList getNameAtIndex:2],  @"Erlang Pascal",@"");
+    STAssertEqualObjects([[fbFriends objectAtIndex:0] name],  @"Adam Smith",@"");
+    STAssertEqualObjects([[fbFriends objectAtIndex:1] name],  @"George Lucas",@"");
+    STAssertEqualObjects([[fbFriends objectAtIndex:2] name],  @"Erlang Pascal",@"");
 
 }
 
-- (void)testGetProfilePictureURLAtIndex
+- (void)testProfilePictureURLs
 {
-    STAssertEqualObjects([fbFriendList getProfilePictureURLAtIndex:0], [NSURL URLWithString:@"https://graph.facebook.com/1201503/picture"], @"");
-    STAssertEqualObjects([fbFriendList getProfilePictureURLAtIndex:1], [NSURL URLWithString:@"https://graph.facebook.com/5123512/picture"], @"");
-    STAssertEqualObjects([fbFriendList getProfilePictureURLAtIndex:2], [NSURL URLWithString:@"https://graph.facebook.com/1241245123/picture"], @"");
+    STAssertEqualObjects([[fbFriends objectAtIndex:0] profilePictureURL], [NSURL URLWithString:@"https://graph.facebook.com/1201503/picture"], @"");
+    STAssertEqualObjects([[fbFriends objectAtIndex:1] profilePictureURL], [NSURL URLWithString:@"https://graph.facebook.com/5123512/picture"], @"");
+    STAssertEqualObjects([[fbFriends objectAtIndex:2] profilePictureURL], [NSURL URLWithString:@"https://graph.facebook.com/1241245123/picture"], @"");
 }
 
 - (void)testNumberOfFriends
 {
-    STAssertEquals([fbFriendList numberOfFriends], 3, @"");
-}
-
--(void)testNameFromPersonJSON
-{
-    STAssertEqualObjects([fbFriendList nameFromPersonJSON:personJSON], @"Adam Smith", @"");
+    STAssertEquals([fbFriends count], (NSUInteger)3, @"");
 }
 
 @end

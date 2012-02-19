@@ -40,9 +40,9 @@
 		C3C1C30614DA3AA6005C32A7 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2FA14DA3AA6005C32A7 /* AFURLConnectionOperation.m */; };
 		C3C1C30714DA3AA6005C32A7 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2FC14DA3AA6005C32A7 /* AFXMLRequestOperation.m */; };
 		C3C1C30814DA3AA6005C32A7 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2FE14DA3AA6005C32A7 /* UIImageView+AFNetworking.m */; };
-		C3D45E6C14E286D900483727 /* FBFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D45E6B14E286D900483727 /* FBFriendList.m */; };
+		C3D45E6C14E286D900483727 /* NSDictionary+FBFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D45E6B14E286D900483727 /* NSDictionary+FBFriendList.m */; };
 		C3D45E6E14E289A800483727 /* AFJSONUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C3C1C2F314DA3AA6005C32A7 /* AFJSONUtilities.m */; };
-		C3D45E7114E2912D00483727 /* FBFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D45E6B14E286D900483727 /* FBFriendList.m */; };
+		C3D45E7114E2912D00483727 /* NSDictionary+FBFriendList.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D45E6B14E286D900483727 /* NSDictionary+FBFriendList.m */; };
 		C3EA460014E3A8F20039EE1A /* MyFriendsListTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */; };
 		C3EA460114E3A8F20039EE1A /* MyFriendsListTableController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */; };
 /* End PBXBuildFile section */
@@ -120,8 +120,8 @@
 		C3C1C2FC14DA3AA6005C32A7 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		C3C1C2FD14DA3AA6005C32A7 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		C3C1C2FE14DA3AA6005C32A7 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		C3D45E6A14E286D900483727 /* FBFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBFriendList.h; sourceTree = "<group>"; };
-		C3D45E6B14E286D900483727 /* FBFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBFriendList.m; sourceTree = "<group>"; };
+		C3D45E6A14E286D900483727 /* NSDictionary+FBFriendList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+FBFriendList.h"; sourceTree = "<group>"; };
+		C3D45E6B14E286D900483727 /* NSDictionary+FBFriendList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+FBFriendList.m"; sourceTree = "<group>"; };
 		C3EA45FD14E3A8F20039EE1A /* MyFriendsListTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyFriendsListTableController.h; path = ../MyFriendsListTableController.h; sourceTree = "<group>"; };
 		C3EA45FE14E3A8F20039EE1A /* MyFriendsListTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyFriendsListTableController.m; path = ../MyFriendsListTableController.m; sourceTree = "<group>"; };
 		C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MyFriendsListTableController.xib; path = ../MyFriendsListTableController.xib; sourceTree = "<group>"; };
@@ -269,8 +269,8 @@
 				C3EA45FF14E3A8F20039EE1A /* MyFriendsListTableController.xib */,
 				C3C1C2DB14DA39EF005C32A7 /* AppDelegate.h */,
 				C3C1C2DC14DA39EF005C32A7 /* AppDelegate.m */,
-				C3D45E6A14E286D900483727 /* FBFriendList.h */,
-				C3D45E6B14E286D900483727 /* FBFriendList.m */,
+				C3D45E6A14E286D900483727 /* NSDictionary+FBFriendList.h */,
+				C3D45E6B14E286D900483727 /* NSDictionary+FBFriendList.m */,
 				C3C1C2D314DA39EF005C32A7 /* Supporting Files */,
 			);
 			path = "My FB friends";
@@ -426,7 +426,7 @@
 			files = (
 				C393310914E2843F00101A25 /* FBFriendListTests.m in Sources */,
 				C3D45E6E14E289A800483727 /* AFJSONUtilities.m in Sources */,
-				C3D45E7114E2912D00483727 /* FBFriendList.m in Sources */,
+				C3D45E7114E2912D00483727 /* NSDictionary+FBFriendList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,7 +456,7 @@
 				C38C0E9814DFBE7900C883B7 /* SBJsonBase.m in Sources */,
 				C38C0E9914DFBE7900C883B7 /* SBJsonParser.m in Sources */,
 				C38C0E9A14DFBE7900C883B7 /* SBJsonWriter.m in Sources */,
-				C3D45E6C14E286D900483727 /* FBFriendList.m in Sources */,
+				C3D45E6C14E286D900483727 /* NSDictionary+FBFriendList.m in Sources */,
 				C3EA460014E3A8F20039EE1A /* MyFriendsListTableController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

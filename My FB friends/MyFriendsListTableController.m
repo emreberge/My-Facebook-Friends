@@ -30,13 +30,13 @@
 
 #pragma mark - Properties
 
-@synthesize fbFriendList=_fbFriendList;
+@synthesize fbFriends=_fbFriends;
 
-- (void)setFbFriendList:(FBFriendList *)fbFriendList
+- (void)setFbFriends:(NSArray *) fbFriends
 {
-    if(fbFriendList !=_fbFriendList) {
-        [_fbFriendList release];
-        _fbFriendList = [fbFriendList retain];
+    if(fbFriends != _fbFriends) {
+        [_fbFriends release];
+        _fbFriends = [fbFriends retain];
         [self.tableView reloadData];
     }
 }
@@ -96,7 +96,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.fbFriendList numberOfFriends];
+    return [self.fbFriends count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -108,8 +108,8 @@
         cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
     }
     
-    cell.textLabel.text = [self.fbFriendList getNameAtIndex:indexPath.row];
-    [cell.imageView setImageWithURL:[self.fbFriendList getProfilePictureURLAtIndex:indexPath.row] placeholderImage:[UIImage imageNamed:@"fb.png"]];
+    cell.textLabel.text = [[self.fbFriends objectAtIndex:indexPath.row] name];
+    [cell.imageView setImageWithURL:[[self.fbFriends objectAtIndex:indexPath.row] profilePictureURL] placeholderImage:[UIImage imageNamed:@"fb.png"]];
     
     
     return cell;

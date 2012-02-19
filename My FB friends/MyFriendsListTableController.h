@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FBFriendList.h"
+#import "NSDictionary+FBFriendList.h"
 
 @interface MyFriendsListTableController : UITableViewController
 
-@property (nonatomic, retain) FBFriendList *fbFriendList;
+@property (nonatomic, retain) NSArray *fbFriends;
 
 @end

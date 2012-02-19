@@ -7,16 +7,10 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "FBFriendList.h"
 
 @interface FBFriendListTests : SenTestCase
 {
-    FBFriendList* fbFriendList;
-    id personJSON;
+    NSArray* fbFriends;
 }
 
-@end
-
-@interface FBFriendList(test)
-- (NSString*) nameFromPersonJSON:(id) personJSON;
 @end
