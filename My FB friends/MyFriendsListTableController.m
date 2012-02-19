@@ -29,6 +29,11 @@
 }
 
 #pragma mark - Properties
+- (void)dealloc
+{
+    [_fbFriends release];
+    [super release];
+}
 
 @synthesize fbFriends=_fbFriends;
 
