@@ -40,7 +40,7 @@
 - (void)dealloc
 {
     [_fbFriends release];
-    [super release];
+    [super dealloc];
 }
 
 #pragma mark - Properties
